@@ -7,7 +7,7 @@ const getInitialDarkMode = () => {
     "(prefers-color-scheme:dark)"
   ).matches;
   const storedDarkMode = localStorage.getItem("darkTheme") === "true";
-  return storedDarkMode ? prefersDarkMode : storedDarkMode;
+  return prefersDarkMode || storedDarkMode;
 };
 
 export const AppProvider = ({ children }) => {
